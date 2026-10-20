@@ -155,21 +155,21 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(208, 182);
+            this.txtEmail.Location = new System.Drawing.Point(208, 169);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(172, 23);
             this.txtEmail.TabIndex = 5;
             // 
             // txtAdres
             // 
-            this.txtAdres.Location = new System.Drawing.Point(208, 226);
+            this.txtAdres.Location = new System.Drawing.Point(207, 211);
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(172, 23);
             this.txtAdres.TabIndex = 6;
             // 
             // txtVergiNo
             // 
-            this.txtVergiNo.Location = new System.Drawing.Point(208, 256);
+            this.txtVergiNo.Location = new System.Drawing.Point(208, 251);
             this.txtVergiNo.Name = "txtVergiNo";
             this.txtVergiNo.Size = new System.Drawing.Size(172, 23);
             this.txtVergiNo.TabIndex = 7;
@@ -177,6 +177,9 @@
             // cmbAktif
             // 
             this.cmbAktif.FormattingEnabled = true;
+            this.cmbAktif.Items.AddRange(new object[] {
+            "True",
+            "False"});
             this.cmbAktif.Location = new System.Drawing.Point(208, 296);
             this.cmbAktif.Name = "cmbAktif";
             this.cmbAktif.Size = new System.Drawing.Size(168, 25);
@@ -236,6 +239,7 @@
             this.dataGridView1.RowHeadersWidth = 43;
             this.dataGridView1.Size = new System.Drawing.Size(642, 373);
             this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Form1
             // 
@@ -267,6 +271,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
