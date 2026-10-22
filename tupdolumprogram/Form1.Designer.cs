@@ -49,7 +49,14 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.btnAra = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtAramaYap = new System.Windows.Forms.TextBox();
+            this.radioFirma = new System.Windows.Forms.RadioButton();
+            this.radioYetkili = new System.Windows.Forms.RadioButton();
+            this.btnArama = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -211,6 +218,7 @@
             this.btnDuzelt.TabIndex = 11;
             this.btnDuzelt.Text = "Düzelt";
             this.btnDuzelt.UseVisualStyleBackColor = true;
+            this.btnDuzelt.Click += new System.EventHandler(this.btnDuzelt_Click);
             // 
             // btnSil
             // 
@@ -220,6 +228,7 @@
             this.btnSil.TabIndex = 12;
             this.btnSil.Text = "Silme";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnAra
             // 
@@ -241,11 +250,72 @@
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(207, 380);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(169, 23);
+            this.txtId.TabIndex = 15;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnArama);
+            this.groupBox1.Controls.Add(this.radioYetkili);
+            this.groupBox1.Controls.Add(this.radioFirma);
+            this.groupBox1.Controls.Add(this.txtAramaYap);
+            this.groupBox1.Location = new System.Drawing.Point(430, 406);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(592, 111);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Arama İşlemleri";
+            // 
+            // txtAramaYap
+            // 
+            this.txtAramaYap.Location = new System.Drawing.Point(20, 23);
+            this.txtAramaYap.Name = "txtAramaYap";
+            this.txtAramaYap.Size = new System.Drawing.Size(387, 23);
+            this.txtAramaYap.TabIndex = 0;
+            // 
+            // radioFirma
+            // 
+            this.radioFirma.AutoSize = true;
+            this.radioFirma.Location = new System.Drawing.Point(20, 66);
+            this.radioFirma.Name = "radioFirma";
+            this.radioFirma.Size = new System.Drawing.Size(117, 22);
+            this.radioFirma.TabIndex = 1;
+            this.radioFirma.TabStop = true;
+            this.radioFirma.Text = "Firmaya Göre";
+            this.radioFirma.UseVisualStyleBackColor = true;
+            // 
+            // radioYetkili
+            // 
+            this.radioYetkili.AutoSize = true;
+            this.radioYetkili.Location = new System.Drawing.Point(166, 66);
+            this.radioYetkili.Name = "radioYetkili";
+            this.radioYetkili.Size = new System.Drawing.Size(145, 22);
+            this.radioYetkili.TabIndex = 2;
+            this.radioYetkili.TabStop = true;
+            this.radioYetkili.Text = "Yetkili Kişiye Göre";
+            this.radioYetkili.UseVisualStyleBackColor = true;
+            // 
+            // btnArama
+            // 
+            this.btnArama.Location = new System.Drawing.Point(433, 23);
+            this.btnArama.Name = "btnArama";
+            this.btnArama.Size = new System.Drawing.Size(104, 33);
+            this.btnArama.TabIndex = 3;
+            this.btnArama.Text = "Ara";
+            this.btnArama.UseVisualStyleBackColor = true;
+            this.btnArama.Click += new System.EventHandler(this.btnArama_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 588);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAra);
             this.Controls.Add(this.btnSil);
@@ -268,11 +338,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,6 +373,12 @@
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnAra;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnArama;
+        private System.Windows.Forms.RadioButton radioYetkili;
+        private System.Windows.Forms.RadioButton radioFirma;
+        private System.Windows.Forms.TextBox txtAramaYap;
     }
 }
 
