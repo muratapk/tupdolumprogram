@@ -16,7 +16,7 @@ namespace tupdolumprogram
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GazFormu());
+            Application.Run(new Form2());
         }
     }
 }
